@@ -1,0 +1,32 @@
+<books>
+  <book>
+      <isbn>200-B-001</isbn>
+      <name>Head First Java</name>
+      <price>55.0</price>
+      <discount>0.25</discount>
+  </book>
+  <book>
+      <isbn>200-B-002</isbn>
+      <name>Maven in action</name>
+      <price>35.0</price>
+      <discount>0.20</discount>
+ </book>
+  <book>
+      <isbn>200-B-003</isbn>
+      <name>Programming Ruby </name>
+      <price>90.0</price>
+      <discount>0.40</discount>
+ </book>
+  <book>
+      <isbn>200-B-004</isbn>
+      <name>Junit in action</name>
+      <price>40.0</price>
+      <discount>0.30</discount>
+ </book>
+  <book>
+      <isbn>200-B-005</isbn>
+      <name>Design Pattern</name>
+      <price>60.0</price>
+      <discount>0.40</discount>
+ </book>
+</books>
