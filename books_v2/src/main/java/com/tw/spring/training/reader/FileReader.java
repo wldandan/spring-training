@@ -5,12 +5,16 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class FileReader extends AbstractReader {
+public class FileReader extends AbstractReader{
     private String fileName;
 
     public FileReader(String fileName)
     {
         this.fileName = fileName;
+    }
+
+    public FileReader()
+    {
     }
 
     public InputStream read() throws IOException {

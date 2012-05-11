@@ -22,6 +22,10 @@ public class BookService {
         this.reader = reader;
     }
 
+    public BookService() {
+    }
+
+
     public Reader getReader() {
         return reader;
     }
