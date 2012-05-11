@@ -5,7 +5,9 @@
       xsi:schemaLocation="http://www.springframework.org/schema/beans 
       http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
 
-    <bean id="emailHandler" class="com.tw.spring.training.spring.applicationContext.event.EmailEventHandler"/>
-    <bean id="smsHandler" class="com.tw.spring.training.spring.applicationContext.event.SMSEventHandler"/>
+    <bean id="beanLifeCycle" class="com.tw.spring.training.spring.lifeCycle.BeanLifeCycle"
+          init-method="init" destroy-method="destroy"/>
+
+    <bean id="beanProcessorHandler" class="com.tw.spring.training.spring.lifeCycle.BeanPostProcessorHandler"/>
 
 </beans>

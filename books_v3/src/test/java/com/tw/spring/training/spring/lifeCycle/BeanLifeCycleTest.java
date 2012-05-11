@@ -14,7 +14,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class BeanLifeCycleTest {
     @Test
     public void shouldGetBeanLifeCycle(){
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("test-beans.xml");
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("test-beans-lifecycle.xml");
         ctx.getBean("beanLifeCycle");
 
     }
