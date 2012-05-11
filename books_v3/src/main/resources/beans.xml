@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="message"/>
+    </bean>
+
+    <bean id="fileReader" class="com.tw.spring.training.reader.FileReader">
+        <constructor-arg>
+            <value>/Users/twer/Work/pratice/spring/books_v3/books.csv</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="urlReader" class="com.tw.spring.training.reader.UrlReader">
+        <constructor-arg>
+            <value>http://10.29.2.117:8080/books/books.csv</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="priceFilter" class="com.tw.spring.training.filter.PriceFilter">
+        <property name="maxPrice">
+            <value type="java.lang.Double">200.0</value>
+        </property>
+    </bean>
+
+    <bean id="bookService" class="com.tw.spring.training.service.BookService">
+        <property name="reader" ref="fileReader"/>
+        <property name="filters">
+            <list>
+                <bean class="com.tw.spring.training.filter.DiscountFilter">
+                    <property name="minDiscount">
+                            <value type="java.lang.Double">0.5</value>
+                    </property>
+                </bean>
+                <ref bean="priceFilter" />
+            </list>
+        </property>
+    </bean>
+</beans>
